@@ -47,9 +47,12 @@ client.once('ready', () => {
         }
 
         client.user.setActivity({
-            name: toBold(text),
+            name: toBold(`đếm tiếp ngày quay lai ${text}`),
             type: ActivityType.Streaming
         });
+
+        // Đặt trạng thái là "Chờ"
+        client.user.setStatus('idle');
     };
 
     updateStatus();
